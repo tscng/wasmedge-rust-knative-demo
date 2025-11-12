@@ -22,7 +22,7 @@ jobs:
           rustup target add wasm32-wasip1
 
       - name: Build Wasm files
-        run: cargo build --target wasm32-wasip1 --release
+        run: RUSTFLAGS="--cfg wasmedge --cfg tokio_unstable" cargo build --target wasm32-wasip1 --release
 
       - name: Create Release
         id: create_release

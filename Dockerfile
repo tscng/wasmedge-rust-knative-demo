@@ -15,7 +15,7 @@ FROM buildbase AS build
 COPY Cargo.toml .
 COPY src ./src
 # Build the Wasm binary
-RUN cargo build --target wasm32-wasip1 --release
+RUN RUSTFLAGS="--cfg wasmedge --cfg tokio_unstable" cargo build --target wasm32-wasip1 --release
 
 FROM scratch
 ENTRYPOINT [ "/wasmedge-rust-knative-demo.wasm" ]
