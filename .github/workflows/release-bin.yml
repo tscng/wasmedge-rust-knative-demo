@@ -38,7 +38,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          file: "target/wasm32-wasip1/release/*.wasm"
+          file: "target/wasm32-wasip1/release/*.wasm,service.yml"
           release_id: ${{ steps.create_release.outputs.id }}
           overwrite: true
           verbose: true
