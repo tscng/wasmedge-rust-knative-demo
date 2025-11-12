@@ -1,4 +1,4 @@
-WasmEdge Rust Plugin Demonstration
+WasmEdge Rust KNative Demonstration
 ===
 This repository implements a demonstration of a WASM KNative service, written in Rust.  
 CI/CD and basic setup is builds on [tscng/wasmedge-rust-plugin-demo](https://github.com/tscng/wasmedge-rust-plugin-demo).
